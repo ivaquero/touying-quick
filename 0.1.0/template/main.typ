@@ -1,6 +1,6 @@
-#import "@local/qslide:0.1.0": *
+#import "@local/touying-qslide:0.1.0": *
 
-#show: qslide.with(
+#show: touying-qslide.with(
   title: [],
   subtilte: none,
   author: [],

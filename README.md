@@ -1,14 +1,14 @@
-# touying-qslide
+# touying-quick
 
 A quick-start slide template based on touying for academic reports.
 
 ## Get Started
 
-Import `qslide` from the `@preview` namespace.
+Import `quick` from the `@preview` namespace.
 
 ```typst
-#import "@preview/qslide:0.1.0": *
-#show: qslide.with(
+#import "@preview/touying-quick:0.1.0": *
+#show: touying-quick.with(
   title: [],
   subtilte: none,
   author: [],
@@ -27,7 +27,7 @@ Import `qslide` from the `@preview` namespace.
 
 ## Clone Official Repository
 
-Clone the [qslide](https://github.com/ivaquero/touying-qslide) repository to your `@local` workspace:
+Clone the [quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
 
 - Linux：
   - `$XDG_DATA_HOME/typst/packages/local`
@@ -35,10 +35,10 @@ Clone the [qslide](https://github.com/ivaquero/touying-qslide) repository to you
 - macOS：`~/Library/Application\ Support/typst/packages/local`
 - Windows：`%APPDATA%/typst/packages/local`
 
-Import `qslide` in the document
+Import `touying-quick` in the document
 
 ```typst
-#import "@local/qslide:0.1.0": *
+#import "@local/touying-quick:0.1.0": *
 ```
 
 > For developement convinience, local repo never changes the version

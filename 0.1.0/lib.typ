@@ -20,7 +20,7 @@
 // excel
 #import "@preview/rexllent:0.3.0": xlsx-parser
 
-#let qslide(
+#let touying-quick(
   title: [],
   subtilte: none,
   author: [],
