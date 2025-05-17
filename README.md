@@ -4,7 +4,7 @@ A quick-start slide template based on touying for academic reports.
 
 ## Get Started
 
-Import `quick` from the `@preview` namespace.
+Import `touying-quick` from the `@preview` namespace.
 
 ```typst
 #import "@preview/touying-quick:0.1.0": *
@@ -27,7 +27,7 @@ Import `quick` from the `@preview` namespace.
 
 ## Clone Official Repository
 
-Clone the [quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
+Clone the [touying-quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
 
 - Linux：
   - `$XDG_DATA_HOME/typst/packages/local`

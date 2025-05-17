@@ -1,11 +1,11 @@
-#import "@local/qslide:0.1.0": *
-#show: qslide.with(
-  title: "Writting A Slide Template",
-  subtilte: "Typst for Academic Reports",
-  institute: "School of Artificial Intelligence",
-  author: "Typist for Typst",
+#let info = toml("../config/info.toml").example
+#let bgimg = image("../img/sky.png", width: 100%)
+
+#import "@local/touying-quick:0.1.0": *
+#show: touying-quick.with(
+  info: info,
+  bgimg: bgimg,
   author-size: 20pt,
-  footer: "Clayton University",
   lang: "en",
 )
 

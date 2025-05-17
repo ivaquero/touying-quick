@@ -1,14 +1,11 @@
-#import "@local/touying-qslide:0.1.0": *
+#import "@local/touying-quick:0.1.0": *
 
-#show: touying-qslide.with(
-  title: [],
-  subtilte: none,
-  author: [],
+#show: touying-quick.with(
   author-size: 14pt,
-  institute: [],
-  background-img: "img/sky.png",
-  footer: [],
   footer-size: 14pt,
-  list-indent: 1.2em,
+  bgimg: none,
+  info: default-info,
+  styles: default-styles,
+  names: default-names,
   lang: "en",
 )

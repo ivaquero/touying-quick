@@ -1,0 +1,19 @@
+[global]
+    title = ""
+    subtitle = ""
+    author = ""
+    institution = ""
+    footer = ""
+    header = ""
+    ending = ""
+    lang = "en"
+
+[example]
+    title = "Writting A Slide Template"
+    subtitle = "Typst for Academic Reports"
+    institution = "School of Artificial Intelligence"
+    author = "ivaquero"
+    footer = "Clayton University"
+    header = ""
+    ending = "Thanks for Your Attention"
+    lang = "en"
