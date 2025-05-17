@@ -4,7 +4,6 @@
 #import "@preview/codly:1.3.0": codly-init, codly
 #import "@preview/codly-languages:0.1.8": codly-languages
 // utils
-#import "@preview/subpar:0.2.2": grid as sgrid
 #import "@preview/theorion:0.3.3": *
 #import "@preview/physica:0.9.5": *
 

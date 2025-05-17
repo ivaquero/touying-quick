@@ -52,3 +52,13 @@ Import `touying-quick` in the document
 ```
 
 > For developement convinience, local repo never changes the version
+
+## Credits
+
+Thanks @OrangeX4 for his [touying](https://github.com/touying-typ) framework as well as his [theorion](https://github.com/OrangeX4/typst-theorion) package.
+
+Also thanks the creators of the following packages
+
+- @Dherse: [codly](https://github.com/Dherse/codly)
+- @swaits: [codly-languages](https://github.com/swaits/typst-collection)
+- @Leedehai: [physica](https://github.com/Leedehai/typst-physics)
