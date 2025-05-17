@@ -7,20 +7,30 @@ A quick-start slide template based on touying for academic reports.
 Import `touying-quick` from the `@preview` namespace.
 
 ```typst
-#import "@preview/touying-quick:0.1.0": *
+#import "@preview/touying-quick:0.2.0": *
 #show: touying-quick.with(
-  title: [],
+  title: "",
   subtilte: none,
-  author: [],
   // following arguments are optional
   // author-size: 14pt,
-  // institute: [],
-  // background-img: "img/sky.png",
-  // footer: [],
   // footer-size: 14pt,
-  // list-indent: 1.2em,
+  // bgimg: none,
+  // info: default-info,
+  // styles: default-styles,
+  // names: default-names,
   // lang: "en",
 )
+```
+
+The toml file should look like this
+
+```toml
+[key-you-like]
+    institution = "Your Institution"
+    author = "Your Name"
+    footer = "Some Info You Would Like to Show"
+    ending = "Thanks for Your Attention"
+    lang = "en"
 ```
 
 ![example](0.1.0/thumbnail.png)

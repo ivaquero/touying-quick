@@ -1,6 +1,8 @@
 #import "deps.typ": *
 
 #let touying-quick(
+  title: "",
+  subtitle: "",
   author-size: 14pt,
   footer-size: 14pt,
   bgimg: none,
@@ -10,9 +12,11 @@
   lang: "en",
   doc,
 ) = {
-  let title = info.title
-  let author = info.author
   let lang = info.lang
+  let author = info.author
+  let institution = info.institution
+  let footer = info.footer
+  let ending = info.ending
 
   let indent-base = 1.2em
 
@@ -96,13 +100,13 @@
   show: codly-init.with()
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
-    footer: text(info.footer, size: footer-size, font: styles.fonts.at(lang).footer),
+    footer: text(footer, size: footer-size, font: styles.fonts.at(lang).footer),
     config-info(
       title: text(title, size: 40pt),
-      subtitle: info.subtitle,
+      subtitle: subtitle,
       author: text(author, size: author-size, font: styles.fonts.at(lang).author),
       date: datetime.today(),
-      institution: info.institution,
+      institution: institution,
       logo: emoji.school,
     ),
     config-colors(
@@ -135,6 +139,6 @@
   doc
 
   slide(align: center + horizon)[
-    #text(info.ending, font: styles.fonts.at(lang).ending, size: 50pt)
+    #text(ending, font: styles.fonts.at(lang).ending, size: 50pt)
   ]
 }

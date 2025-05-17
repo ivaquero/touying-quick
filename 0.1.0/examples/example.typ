@@ -1,9 +1,11 @@
-#let info = toml("../config/info.toml").example
-#let bgimg = image("../img/sky.png", width: 100%)
-
 #import "@local/touying-quick:0.1.0": *
+
+#let info = toml("../config/info.toml").example
+#let bgimg = image("../examples/sky.png", width: 100%)
+
 #show: touying-quick.with(
-  info: info,
+  title: "Writting A Slide Template",
+  subtitle: "Typst for Academic Reports",
   bgimg: bgimg,
   author-size: 20pt,
   lang: "en",
