@@ -1,4 +1,4 @@
-#import "@preview/touying:0.6.0": *
+#import "@preview/touying:0.6.1": *
 #import themes.metropolis: *
 // styles
 #import "@preview/codly:1.3.0": codly-init, codly

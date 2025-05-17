@@ -1,8 +1,5 @@
 [sections.en]
-    preface = "Preface"
-    chapter = "Chapter"
     outline = "Contents"
-    bibliography = "Bibliography"
 
 [blocks.en]
     algorithm = "Algorithm"
@@ -13,10 +10,7 @@
     law = "Law"
 
 [sections.zh]
-    preface = "前言"
-    chapter = "章节"
     outline = "主要内容"
-    bibliography = "参考文献"
 
 [blocks.zh]
     algorithm = "算法"
