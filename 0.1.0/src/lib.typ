@@ -35,19 +35,21 @@
 
   set text(font: styles.fonts.at(lang).context, size: 10.5pt, lang: lang)
 
-  set ref(supplement: it => {
-    if it.func() == heading {
-      linguify("chapter")
-    } else if it.func() == table {
-      it.caption
-    } else if it.func() == image {
-      it.caption
-    } else if it.func() == figure {
-      it.supplement
-    } else if it.func() == math.equation {
-      linguify("eq")
-    } else { }
-  })
+  set ref(
+    supplement: it => {
+      if it.func() == heading {
+        linguify("chapter")
+      } else if it.func() == table {
+        it.caption
+      } else if it.func() == image {
+        it.caption
+      } else if it.func() == figure {
+        it.supplement
+      } else if it.func() == math.equation {
+        linguify("eq")
+      } else { }
+    },
+  )
 
   show heading.where(level: 1): it => {
     counter(math.equation).update(0)
@@ -114,17 +116,19 @@
       neutral-lightest: rgb("#ffffff"),
       neutral-dark: rgb("#3297df"),
     ),
-    config-common(preamble: {
-      codly(
-        languages: codly-languages,
-        display-name: false,
-        fill: rgb("#F2F3F4"),
-        number-format: none,
-        zebra-fill: none,
-        inset: (x: .3em, y: .2em),
-        radius: .5em,
-      )
-    }),
+    config-common(
+      preamble: {
+        codly(
+          languages: codly-languages,
+          display-name: false,
+          fill: rgb("#F2F3F4"),
+          number-format: none,
+          zebra-fill: none,
+          inset: (x: .3em, y: .2em),
+          radius: .5em,
+        )
+      },
+    ),
   )
 
   set-inherited-levels(1)
