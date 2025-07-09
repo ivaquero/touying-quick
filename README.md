@@ -35,7 +35,7 @@ The toml file should look like this
 
 ![example](0.1.0/thumbnail.png)
 
-## Clone Official Repository
+## Clone the Repository
 
 Clone the [touying-quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
 
