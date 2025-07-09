@@ -28,10 +28,8 @@
   if el.func() == math.equation {
     let eq-index = counter(math.equation).at(loc).first()
     let h1 = counter(heading).at(loc).first()
-    let num-style = "(1.1)"
-    (
-      names.blocks.at(lang).equation + link(loc, numbering(num-style, h1, eq-index + 1))
-    )
+
+    names.blocks.at(lang).equation + link(loc, numbering("(1.1)", h1, eq-index + 1))
   } else { x }
 }
 

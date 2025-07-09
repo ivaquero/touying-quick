@@ -4,8 +4,6 @@
 #let touying-quick(
   title: "",
   subtitle: "",
-  author-size: 14pt,
-  footer-size: 10pt,
   bgimg: image("../config/sky.png", width: 100%),
   info: default-info,
   styles: default-styles,
@@ -19,22 +17,31 @@
   let footer = info.footer
   let ending = info.ending
 
-  let indent-base = 1.2em
-
-  set block(above: 1em, below: 0.5em)
-  set list(indent: indent-base)
-  set enum(indent: indent-base)
+  set list(indent: styles.spaces.at(lang).list-indent * 1em)
+  set enum(indent: styles.spaces.at(lang).list-indent * 1em)
+  set block(
+    above: styles.spaces.at(lang).block-above * 1em,
+    below: styles.spaces.at(lang).block-below * 1em,
+    radius: 20%,
+  )
 
   set page(background: bgimg)
 
   set par(
-    first-line-indent: 2em,
+    first-line-indent: (
+      amount: styles.spaces.at(lang).par-indent * 1em,
+      all: if lang == "zh" { true } else { false },
+    ),
     justify: true,
-    leading: 1em,
-    linebreaks: "optimized",
+    leading: styles.spaces.at(lang).par-leading * 1em,
+    spacing: styles.spaces.at(lang).par-spacing * 1em,
   )
 
-  set text(font: styles.fonts.at(lang).context, size: 10.5pt, lang: lang)
+  set text(
+    size: styles.sizes.at(lang).context * 1pt,
+    font: styles.fonts.at(lang).context,
+    lang: lang,
+  )
 
   show heading.where(level: 1): it => {
     counter(math.equation).update(0)
@@ -50,13 +57,21 @@
 
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
-    footer: text(footer, size: footer-size, font: styles.fonts.at(lang).footer),
+    footer: text(
+      footer,
+      size: styles.sizes.at(lang).footer * 1pt,
+      font: styles.fonts.at(lang).footer,
+    ),
     config-info(
-      title: text(title, size: 40pt),
+      title: text(
+        title,
+        size: styles.sizes.at(lang).title * 1pt,
+        font: styles.fonts.at(lang).title,
+      ),
       subtitle: subtitle,
       author: text(
         author,
-        size: author-size,
+        size: styles.sizes.at(lang).author * 1pt,
         font: styles.fonts.at(lang).author,
       ),
       date: datetime.today(),
@@ -76,10 +91,18 @@
   show: show-theorion
 
   title-slide()
-  outline(title: names.sections.at(lang).outline, indent: 2em, depth: 1)
+  outline(
+    title: names.sections.at(lang).outline,
+    indent: styles.spaces.at(lang).contents-indent * 1pt,
+    depth: 1,
+  )
   doc
 
   slide(align: center + horizon)[
-    #text(ending, font: styles.fonts.at(lang).ending, size: 50pt)
+    #text(
+      ending,
+      size: styles.sizes.at(lang).ending * 1pt,
+      font: styles.fonts.at(lang).ending,
+    )
   ]
 }
