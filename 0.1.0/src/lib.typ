@@ -17,11 +17,11 @@
   let footer = info.footer
   let ending = info.ending
 
-  set list(indent: styles.spaces.at(lang).list-indent * 1em)
-  set enum(indent: styles.spaces.at(lang).list-indent * 1em)
+  set list(indent: styles.spaces.list-indent * 1em)
+  set enum(indent: styles.spaces.list-indent * 1em)
   set block(
-    above: styles.spaces.at(lang).block-above * 1em,
-    below: styles.spaces.at(lang).block-below * 1em,
+    above: styles.spaces.block-above * 1em,
+    below: styles.spaces.block-below * 1em,
     radius: 20%,
   )
 
@@ -29,16 +29,16 @@
 
   set par(
     first-line-indent: (
-      amount: styles.spaces.at(lang).par-indent * 1em,
+      amount: styles.spaces.par-indent * 1em,
       all: if lang == "zh" { true } else { false },
     ),
     justify: true,
-    leading: styles.spaces.at(lang).par-leading * 1em,
-    spacing: styles.spaces.at(lang).par-spacing * 1em,
+    leading: styles.spaces.par-leading * 1em,
+    spacing: styles.spaces.par-spacing * 1em,
   )
 
   set text(
-    size: styles.sizes.at(lang).context * 1pt,
+    size: styles.sizes.context * 1pt,
     font: styles.fonts.at(lang).context,
     lang: lang,
   )
@@ -59,19 +59,19 @@
     aspect-ratio: "16-9",
     footer: text(
       footer,
-      size: styles.sizes.at(lang).footer * 1pt,
+      size: styles.sizes.footer * 1pt,
       font: styles.fonts.at(lang).footer,
     ),
     config-info(
       title: text(
         title,
-        size: styles.sizes.at(lang).title * 1pt,
+        size: styles.sizes.title * 1pt,
         font: styles.fonts.at(lang).title,
       ),
       subtitle: subtitle,
       author: text(
         author,
-        size: styles.sizes.at(lang).author * 1pt,
+        size: styles.sizes.author * 1pt,
         font: styles.fonts.at(lang).author,
       ),
       date: datetime.today(),
@@ -93,7 +93,7 @@
   title-slide()
   outline(
     title: names.sections.at(lang).outline,
-    indent: styles.spaces.at(lang).contents-indent * 1pt,
+    indent: styles.spaces.contents-indent * 1pt,
     depth: 1,
   )
   doc
@@ -101,7 +101,7 @@
   slide(align: center + horizon)[
     #text(
       ending,
-      size: styles.sizes.at(lang).ending * 1pt,
+      size: styles.sizes.ending * 1pt,
       font: styles.fonts.at(lang).ending,
     )
   ]
