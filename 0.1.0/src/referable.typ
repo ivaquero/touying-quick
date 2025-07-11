@@ -33,25 +33,11 @@
   } else { x }
 }
 
-#let figure-supplement-style(x, names: default-names) = {
-  show figure.caption.where(kind: "chapter"): none
-
+#let figure-supplement-style(x) = {
   show figure.caption.where(kind: figure): it => [
-    #if it.supplement == none {
-      names.blocks.at(lang).figure
-    } else {
-      it.supplement
-    }
-    #context it.counter.display(it.numbering)
     #it.body
   ]
   show figure.caption.where(kind: table): it => [
-    #if it.supplement == none {
-      names.blocks.at(lang).table
-    } else {
-      it.supplement
-    }
-    #context it.counter.display(it.numbering)
     #it.body
   ]
   x

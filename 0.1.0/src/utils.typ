@@ -28,15 +28,16 @@
   )
 )
 
-#let ktable(data, k, inset: 0.3em) = table(
-  columns: k,
-  inset: inset,
-  align: center + horizon,
-  stroke: table-three-line(rgb("000")),
-  ..data.flatten(),
-)
+#let tableq(data, k, inset: 0.3em, stroke-color: rgb("000")) = {
+  table(
+    columns: k,
+    inset: inset,
+    align: center + horizon,
+    stroke: table-three-line(stroke-color),
+    ..data.flatten(),
+  )
+}
 
-// codes
 #let code(text, lang: "python", breakable: true, width: 100%) = block(
   fill: rgb("#F3F3F3"),
   stroke: rgb("#DBDBDB"),
