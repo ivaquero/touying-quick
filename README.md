@@ -7,13 +7,11 @@ A quick-start slide template based on touying for academic reports.
 Import `touying-quick` from the `@preview` namespace.
 
 ```typst
-#import "@preview/touying-quick:0.2.0": *
+#import "@preview/touying-quick:0.2.1": *
 #show: touying-quick.with(
   title: "",
   subtilte: none,
   // following arguments are optional
-  // author-size: 14pt,
-  // footer-size: 14pt,
   // bgimg: none,
   // info: default-info,
   // styles: default-styles,
@@ -34,6 +32,62 @@ The toml file should look like this
 ```
 
 ![example](0.1.0/thumbnail.png)
+
+## Tweaking the Params
+
+### Names
+
+touying-quick's section names support English and Chinese by default. If you are not neither English speaker nor Chinese speaker, assume you are a French speaker, you can create a toml like
+
+```toml
+[sections.fr]
+    outline = "Contents"
+
+[blocks.fr]
+    algorithm = "Algorithme"
+    table = "Tableau"
+    figure = "Figure"
+    equation = " Eq."
+    rule = "Règle"
+    law = "Loi"
+```
+
+after reading this file by `toml()`, assign its value to the argument `names` in function `touying-quick()`.
+
+### Styles
+
+If you are not satisfied with the default styles such as font-family, font-size, you can create a toml like
+
+```toml
+[fonts.en]
+    title = "Palatino"
+    author = "Times New Roman"
+    footer = "Georgia"
+    contents = "Georgia"
+    context = "Georgia"
+    math = "Times New Roman"
+    ending = "Palatino"
+
+[sizes]
+    author = 14
+    title = 40
+    context = 10.5
+    footer = 10
+    ending = 50
+
+[spaces]
+    par-indent = 2
+    par-leading = 1
+    par-spacing = 1
+    list-indent = 1.2
+    block-above = 1
+    block-below = 1
+    contents-indent = 2
+```
+
+after reading this file by `toml()`, assign its value to the `styles` argument in function `touying-quick()`.
+
+Don't forget to change the key `lang` in your info toml metioned above.
 
 ## Clone the Repository
 
