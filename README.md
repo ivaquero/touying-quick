@@ -115,4 +115,3 @@ Also thanks the creators of the following packages
 
 - @Dherse: [codly](https://github.com/Dherse/codly)
 - @swaits: [codly-languages](https://github.com/swaits/typst-collection)
-- @Leedehai: [physica](https://github.com/Leedehai/typst-physics)
