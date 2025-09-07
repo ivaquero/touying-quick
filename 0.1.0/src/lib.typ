@@ -79,24 +79,30 @@
       logo: emoji.school,
     ),
     config-colors(
+      // primary
       primary: rgb(styles.colors.at("primary")),
+      primary-dark: rgb(styles.colors.at("primary-dark")),
+      primary-darkest: rgb(styles.colors.at("primary-darkest")),
       primary-light: rgb(styles.colors.at("primary-light")),
       primary-lightest: rgb(styles.colors.at("primary-lightest")),
+      // secondary
       secondary: rgb(styles.colors.at("secondary")),
-      secondary-light: rgb(styles.colors.at("secondary-light")),
-      secondary-lightest: rgb(styles.colors.at("secondary-lightest")),
       secondary-dark: rgb(styles.colors.at("secondary-dark")),
       secondary-darkest: rgb(styles.colors.at("secondary-darkest")),
+      secondary-light: rgb(styles.colors.at("secondary-light")),
+      secondary-lightest: rgb(styles.colors.at("secondary-lightest")),
+      // tertiary
       tertiary: rgb(styles.colors.at("tertiary")),
-      tertiary-light: rgb(styles.colors.at("tertiary-light")),
-      tertiary-lightest: rgb(styles.colors.at("tertiary-lightest")),
       tertiary-dark: rgb(styles.colors.at("tertiary-dark")),
       tertiary-darkest: rgb(styles.colors.at("tertiary-darkest")),
+      tertiary-light: rgb(styles.colors.at("tertiary-light")),
+      tertiary-lightest: rgb(styles.colors.at("tertiary-lightest")),
+      // neutral
       neutral: rgb(styles.colors.at("neutral")),
-      neutral-light: rgb(styles.colors.at("neutral-light")),
-      neutral-lightest: rgb(styles.colors.at("neutral-lightest")),
       neutral-dark: rgb(styles.colors.at("neutral-dark")),
       neutral-darkest: rgb(styles.colors.at("neutral-darkest")),
+      neutral-light: rgb(styles.colors.at("neutral-light")),
+      neutral-lightest: rgb(styles.colors.at("neutral-lightest")),
     ),
   )
 

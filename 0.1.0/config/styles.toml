@@ -35,7 +35,7 @@
 [colors]
     # heading level 1
     primary = "#fcbd00"
-    primary-light = "#fcbd00"
+    primary-light = "#d6c6b7"
     primary-lightest = "#fcbd00"
     primary-dark = "#fcbd00"
     primary-darkest = "#fcbd00"
@@ -46,7 +46,7 @@
     secondary-dark = "#3297df"
     secondary-darkest = "#3297df"
     # heading level 3
-    tertiary = "#3297df"
+    tertiary = "#448C95"
     tertiary-light = "#3297df"
     tertiary-lightest = "#3297df"
     tertiary-dark = "#3297df"
@@ -54,6 +54,6 @@
     # content
     neutral = "#3297df"
     neutral-light = "#3297df"
-    neutral-lightest = "#ffffff"
-    neutral-dark = "#3297df"
+    neutral-lightest = "#fafafa"
+    neutral-dark = "#202020"
     neutral-darkest = "#000000"
