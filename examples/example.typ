@@ -12,8 +12,8 @@
 
 == Basic Syntax
 
-- heading
-- math equation
-- function
+=== heading
+=== math equation
+=== function
 
 ==

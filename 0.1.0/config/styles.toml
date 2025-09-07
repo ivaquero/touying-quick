@@ -33,9 +33,27 @@
     contents-indent = 2
 
 [colors]
+    # heading level 1
+    primary = "#fcbd00"
     primary-light = "#fcbd00"
+    primary-lightest = "#fcbd00"
+    primary-dark = "#fcbd00"
+    primary-darkest = "#fcbd00"
+    # heading level 2
     secondary = "#3297df"
     secondary-light = "#ff0000"
+    secondary-lightest = "#3297df"
+    secondary-dark = "#3297df"
+    secondary-darkest = "#3297df"
+    # heading level 3
+    tertiary = "#3297df"
+    tertiary-light = "#3297df"
+    tertiary-lightest = "#3297df"
+    tertiary-dark = "#3297df"
+    tertiary-darkest = "#3297df"
+    # content
+    neutral = "#3297df"
+    neutral-light = "#3297df"
     neutral-lightest = "#ffffff"
     neutral-dark = "#3297df"
     neutral-darkest = "#000000"
