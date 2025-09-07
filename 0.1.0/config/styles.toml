@@ -31,3 +31,11 @@
     block-above = 1
     block-below = 1
     contents-indent = 2
+
+[colors]
+    primary-light = "#fcbd00"
+    secondary = "#3297df"
+    secondary-light = "#ff0000"
+    neutral-lightest = "#ffffff"
+    neutral-dark = "#3297df"
+    neutral-darkest = "#000000"

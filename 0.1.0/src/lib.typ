@@ -79,11 +79,12 @@
       logo: emoji.school,
     ),
     config-colors(
-      primary-light: rgb("#fcbd00"),
-      secondary: rgb("#3297df"),
-      secondary-light: rgb("#ff0000"),
-      neutral-lightest: rgb("#ffffff"),
-      neutral-dark: rgb("#3297df"),
+      primary-light: rgb(styles.colors.at("primary-light")),
+      secondary: rgb(styles.colors.at("secondary")),
+      secondary-light: rgb(styles.colors.at("secondary-light")),
+      neutral-lightest: rgb(styles.colors.at("neutral-lightest")),
+      neutral-dark: rgb(styles.colors.at("neutral-dark")),
+      neutral-darkest: rgb(styles.colors.at("neutral-darkest")),
     ),
   )
 
