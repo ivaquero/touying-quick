@@ -43,6 +43,9 @@
     lang: lang,
   )
 
+  set heading(numbering: "1.1.") if styles.components.heading-idx == true
+
+  show heading: heading-size-style.with(lang: lang, styles: styles)
   show heading.where(level: 1): it => {
     counter(math.equation).update(0)
     it
@@ -68,7 +71,11 @@
         size: styles.sizes.title * 1pt,
         font: styles.fonts.at(lang).title,
       ),
-      subtitle: subtitle,
+      subtitle: text(
+        subtitle,
+        size: styles.sizes.subtitle * 1pt,
+        font: styles.fonts.at(lang).subtitle,
+      ),
       author: text(
         author,
         size: styles.sizes.author * 1pt,

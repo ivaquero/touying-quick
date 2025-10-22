@@ -1,5 +1,6 @@
 [fonts.en]
     title = "Palatino"
+    subtitle = "Palatino"
     author = "Times New Roman"
     footer = "Georgia"
     contents = "Georgia"
@@ -9,6 +10,7 @@
 
 [fonts.zh]
     title = "STKaiti"
+    subtitle = "STKaiti"
     author = "Kaiti SC"
     footer = "Songti SC"
     contents = "Songti SC"
@@ -16,9 +18,17 @@
     math = "Kaiti SC"
     ending = "STKaiti"
 
+[components]
+    heading-idx = true
+
 [sizes]
     author = 14
     title = 40
+    subtitle = 18
+    heading-1 = 16
+    heading-2 = 14
+    heading-3 = 12
+    heading-4 = 10.5
     context = 10.5
     footer = 10
     ending = 50
@@ -34,11 +44,11 @@
 
 [colors]
     # heading level 1
-    primary = "#fcbd00"
-    primary-light = "#d6c6b7"
+    primary = "#001affff"
+    primary-light = "#ff0000ff"
     primary-lightest = "#fcbd00"
-    primary-dark = "#fcbd00"
-    primary-darkest = "#fcbd00"
+    primary-dark = "#ffde79ff"
+    primary-darkest = "#ffc004ff"
     # heading level 2
     secondary = "#3297df"
     secondary-light = "#ff0000"

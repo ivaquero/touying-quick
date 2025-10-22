@@ -1,5 +1,25 @@
 #import "deps.typ": *
 
+#let heading-size-style(
+  x,
+  lang: "en",
+  styles: default-styles,
+) = {
+  show heading.where(level: 1): set text(
+    size: styles.sizes.heading-1 * 1pt,
+  )
+  show heading.where(level: 2): set text(
+    size: styles.sizes.heading-2 * 1pt,
+  )
+  show heading.where(level: 3): set text(
+    size: styles.sizes.heading-3 * 1pt,
+  )
+  show heading.where(level: 4): set text(
+    size: styles.sizes.heading-4 * 1pt,
+  )
+  x
+}
+
 #let equation-numbering-style(x) = {
   show math.equation: it => {
     if it.has("label") {
