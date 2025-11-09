@@ -1,6 +1,7 @@
-[global]
+[default]
     author = ""
     institution = ""
+    series = ""
     footer = ""
     header = ""
     ending = ""

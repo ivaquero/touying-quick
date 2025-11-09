@@ -58,6 +58,8 @@
 
   show link: underline
 
+  let subt = if subtitle == "" { info.series } else { subtitle }
+
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
     footer: text(
@@ -72,7 +74,7 @@
         font: styles.fonts.at(lang).title,
       ),
       subtitle: text(
-        subtitle,
+        subt,
         size: styles.sizes.subtitle * 1pt,
         font: styles.fonts.at(lang).subtitle,
       ),
