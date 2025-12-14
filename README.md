@@ -10,49 +10,44 @@ Import `touying-quick` from the `@preview` namespace.
 #import "@preview/touying-quick:0.2.1": *
 #show: touying-quick.with(
   title: "",
-  subtilte: none,
-  // following arguments are optional
-  // bgimg: none,
+  subtitle: "",
+  // heading-idx: true,
+  // bgimg: bgsky,
+  // theme: "blue",
   // info: default-info,
   // styles: default-styles,
   // names: default-names,
   // lang: "en",
+  // doc,
 )
 ```
 
-The toml file should look like this
+## Tweaking the Params
+
+### Heading Index
+
+`heading-idx` controls whether set heading-numbering.
+
+### Background Image
+
+`bgimg` provides with 3 options: `bgsky`, `bghexagon` and `bgbook`, if they are not your flavor, you may set it to your image path.
+
+### Infomation
+
+The `info` is a toml file that like this
 
 ```toml
-[key-you-like]
-    institution = "Your Institution"
-    author = "Your Name"
-    footer = "Some Info You Would Like to Show"
-    ending = "Thanks for Your Attention"
+[example]
+    footer = "Clayton University"
+    header = ""
     lang = "en"
+    author = "ivaquero"
+    series = "Typst for Academic Reports"
+    institution = "School of Artificial Intelligence"
+    ending = "Thanks for Your Attention"
 ```
 
 ![example](0.1.0/thumbnail.png)
-
-## Tweaking the Params
-
-### Names
-
-touying-quick's section names support English and Chinese by default. If you are not neither English speaker nor Chinese speaker, assume you are a French speaker, you can create a toml like
-
-```toml
-[sections.fr]
-    outline = "Contents"
-
-[blocks.fr]
-    algorithm = "Algorithme"
-    table = "Tableau"
-    figure = "Figure"
-    equation = " Eq."
-    rule = "Règle"
-    law = "Loi"
-```
-
-after reading this file by `toml()`, assign its value to the argument `names` in function `touying-quick()`.
 
 ### Styles
 
@@ -86,6 +81,25 @@ If you are not satisfied with the default styles such as font-family, font-size,
 ```
 
 after reading this file by `toml()`, assign its value to the `styles` argument in function `touying-quick()`.
+
+### Names
+
+touying-quick's section names support English and Chinese by default. If you are not neither English speaker nor Chinese speaker, assume you are a French speaker, you can create a toml, for example `names.toml`, like
+
+```toml
+[sections.fr]
+    outline = "Contents"
+
+[blocks.fr]
+    algorithm = "Algorithme"
+    table = "Tableau"
+    figure = "Figure"
+    equation = " Eq."
+    rule = "Règle"
+    law = "Loi"
+```
+
+after reading this file by `toml()`, assign its value to the argument `names` in function `touying-quick()`.
 
 Don't forget to change the key `lang` in your info toml metioned above.
 

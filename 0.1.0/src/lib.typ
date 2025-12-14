@@ -4,7 +4,9 @@
 #let touying-quick(
   title: "",
   subtitle: "",
-  bgimg: image("../config/sky.png", width: 100%),
+  heading-idx: true,
+  bgimg: bgsky,
+  theme: "blue",
   info: default-info,
   styles: default-styles,
   names: default-names,
@@ -17,6 +19,8 @@
   let footer = info.footer
   let ending = info.ending
 
+  let theme = styles.colors.at(theme)
+
   set list(indent: styles.spaces.list-indent * 1em)
   set enum(indent: styles.spaces.list-indent * 1em)
   set block(
@@ -25,7 +29,7 @@
     radius: 20%,
   )
 
-  set page(background: bgimg)
+  set page(background: image(bgimg, width: 100%))
 
   set par(
     first-line-indent: (
@@ -43,7 +47,7 @@
     lang: lang,
   )
 
-  set heading(numbering: "1.1.") if styles.components.heading-idx == true
+  set heading(numbering: "1.1.") if heading-idx == true
 
   show heading: heading-size-style.with(lang: lang, styles: styles)
   show heading.where(level: 1): it => {
@@ -89,29 +93,29 @@
     ),
     config-colors(
       // primary
-      primary: rgb(styles.colors.at("primary")),
-      primary-dark: rgb(styles.colors.at("primary-dark")),
-      primary-darkest: rgb(styles.colors.at("primary-darkest")),
-      primary-light: rgb(styles.colors.at("primary-light")),
-      primary-lightest: rgb(styles.colors.at("primary-lightest")),
+      primary: rgb(theme.at("primary")),
+      primary-dark: rgb(theme.at("primary-dark")),
+      primary-darkest: rgb(theme.at("primary-darkest")),
+      primary-light: rgb(theme.at("primary-light")),
+      primary-lightest: rgb(theme.at("primary-lightest")),
       // secondary
-      secondary: rgb(styles.colors.at("secondary")),
-      secondary-dark: rgb(styles.colors.at("secondary-dark")),
-      secondary-darkest: rgb(styles.colors.at("secondary-darkest")),
-      secondary-light: rgb(styles.colors.at("secondary-light")),
-      secondary-lightest: rgb(styles.colors.at("secondary-lightest")),
+      secondary: rgb(theme.at("secondary")),
+      secondary-dark: rgb(theme.at("secondary-dark")),
+      secondary-darkest: rgb(theme.at("secondary-darkest")),
+      secondary-light: rgb(theme.at("secondary-light")),
+      secondary-lightest: rgb(theme.at("secondary-lightest")),
       // tertiary
-      tertiary: rgb(styles.colors.at("tertiary")),
-      tertiary-dark: rgb(styles.colors.at("tertiary-dark")),
-      tertiary-darkest: rgb(styles.colors.at("tertiary-darkest")),
-      tertiary-light: rgb(styles.colors.at("tertiary-light")),
-      tertiary-lightest: rgb(styles.colors.at("tertiary-lightest")),
+      tertiary: rgb(theme.at("tertiary")),
+      tertiary-dark: rgb(theme.at("tertiary-dark")),
+      tertiary-darkest: rgb(theme.at("tertiary-darkest")),
+      tertiary-light: rgb(theme.at("tertiary-light")),
+      tertiary-lightest: rgb(theme.at("tertiary-lightest")),
       // neutral
-      neutral: rgb(styles.colors.at("neutral")),
-      neutral-dark: rgb(styles.colors.at("neutral-dark")),
-      neutral-darkest: rgb(styles.colors.at("neutral-darkest")),
-      neutral-light: rgb(styles.colors.at("neutral-light")),
-      neutral-lightest: rgb(styles.colors.at("neutral-lightest")),
+      neutral: rgb(theme.at("neutral")),
+      neutral-dark: rgb(theme.at("neutral-dark")),
+      neutral-darkest: rgb(theme.at("neutral-darkest")),
+      neutral-light: rgb(theme.at("neutral-light")),
+      neutral-lightest: rgb(theme.at("neutral-lightest")),
     ),
   )
 
@@ -125,6 +129,11 @@
     depth: 1,
   )
   doc
+
+  [
+    #set heading(numbering: none)
+    ==
+  ]
 
   slide(align: center + horizon)[
     #text(

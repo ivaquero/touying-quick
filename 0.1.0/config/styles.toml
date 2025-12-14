@@ -18,9 +18,6 @@
     math = "Kaiti SC"
     ending = "STKaiti"
 
-[components]
-    heading-idx = true
-
 [sizes]
     author = 14
     title = 40
@@ -42,7 +39,7 @@
     block-below = 1
     contents-indent = 2
 
-[colors]
+[colors.blue]
     # heading level 1
     primary = "#001affff"
     primary-light = "#ff0000ff"
@@ -51,6 +48,32 @@
     primary-darkest = "#ffc004ff"
     # heading level 2
     secondary = "#3297df"
+    secondary-light = "#ff0000"
+    secondary-lightest = "#3297df"
+    secondary-dark = "#3297df"
+    secondary-darkest = "#3297df"
+    # heading level 3
+    tertiary = "#448C95"
+    tertiary-light = "#3297df"
+    tertiary-lightest = "#3297df"
+    tertiary-dark = "#3297df"
+    tertiary-darkest = "#3297df"
+    # content
+    neutral = "#3297df"
+    neutral-light = "#3297df"
+    neutral-lightest = "#fafafa"
+    neutral-dark = "#202020"
+    neutral-darkest = "#000000"
+
+[colors.red]
+    # heading level 1
+    primary = "#e00c0cff"
+    primary-light = "#3c51f3ff"
+    primary-lightest = "#fcbd00"
+    primary-dark = "#ecdfbaff"
+    primary-darkest = "#fcbd00"
+    # heading level 2
+    secondary = "#a14848ff"
     secondary-light = "#ff0000"
     secondary-lightest = "#3297df"
     secondary-dark = "#3297df"

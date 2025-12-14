@@ -8,9 +8,10 @@
     lang = "en"
 
 [example]
-    institution = "School of Artificial Intelligence"
-    author = "ivaquero"
     footer = "Clayton University"
     header = ""
-    ending = "Thanks for Your Attention"
     lang = "en"
+    author = "ivaquero"
+    series = "Typst Slides Tutorial"
+    institution = "School of Artificial Intelligence"
+    ending = "Thanks for Your Attention"
