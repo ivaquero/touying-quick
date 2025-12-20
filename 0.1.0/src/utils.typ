@@ -1,7 +1,7 @@
 #import "deps.typ": *
 
 // text
-#let ctext(body) = text(body, font: config-fonts.at("zh").math)
+#let ctext(body) = text(body, font: default-styles.fonts.at("zh").math)
 
 // table: three-line
 #let table-three-line(stroke-color) = (
