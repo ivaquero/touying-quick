@@ -54,6 +54,8 @@
     counter(math.equation).update(0)
     it
   }
+
+  set math.cases(gap: 1em)
   show math.equation: equation-numbering-style
   show ref: ref-style.with(lang: lang, names: names)
   show figure: figure-supplement-style
