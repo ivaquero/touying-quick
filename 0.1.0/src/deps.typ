@@ -1,8 +1,7 @@
 #import "@preview/touying:0.6.1": *
 #import themes.metropolis: *
 // styles
-#import "@preview/codly:1.3.0": codly, codly-init
-#import "@preview/codly-languages:0.1.10": codly-languages
+#import "@preview/codly:1.3.0": *
 // utils
 #import "@preview/theorion:0.4.1": *
 
