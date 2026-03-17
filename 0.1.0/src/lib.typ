@@ -125,6 +125,7 @@
   show: show-theorion
 
   title-slide()
+
   outline(
     title: names.sections.at(lang).outline,
     indent: styles.spaces.contents-indent * 1pt,
@@ -133,15 +134,13 @@
   doc
 
   [
-    #set heading(numbering: none)
-    ==
-  ]
-
-  slide(align: center + horizon)[
-    #text(
-      ending,
-      size: styles.sizes.ending * 1pt,
-      font: styles.fonts.at(lang).ending,
-    )
+    == <touying:hidden>
+    #slide(align: center + horizon)[
+      #text(
+        ending,
+        size: styles.sizes.ending * 1pt,
+        font: styles.fonts.at(lang).ending,
+      )
+    ]
   ]
 }

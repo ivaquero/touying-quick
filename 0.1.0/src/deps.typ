@@ -1,9 +1,9 @@
-#import "@preview/touying:0.6.1": *
+#import "@preview/touying:0.6.2": *
 #import themes.metropolis: *
 // styles
 #import "@preview/codly:1.3.0": *
 // utils
-#import "@preview/theorion:0.4.1": *
+#import "@preview/theorion:0.5.0": *
 
 #let default-info = toml("../config/info.toml").default
 #let default-names = toml("../config/names.toml")

@@ -50,8 +50,8 @@
   raw(text, lang: lang, align: left, block: true),
 )
 
-#let tip = tip-box
-#let note = note-box
-#let quote = quote-box
-#let warning = warning-box
-#let caution = caution-box
+#let tip = tip-block
+#let note = note-block
+#let quote = quote-block
+#let warning = warning-block
+#let caution = caution-block
