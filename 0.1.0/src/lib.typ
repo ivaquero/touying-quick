@@ -121,10 +121,10 @@
     ),
   )
 
-  set-inherited-levels(1)
   show: show-theorion
 
   title-slide()
+  set-inherited-levels(1)
 
   outline(
     title: names.sections.at(lang).outline,
