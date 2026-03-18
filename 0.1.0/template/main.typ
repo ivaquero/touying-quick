@@ -3,7 +3,9 @@
 #show: touying-quick.with(
   title: "",
   subtitle: "",
-  bgimg: none,
+  heading-idx: true,
+  bgimg: bgsky,
+  theme: "blue",
   info: default-info,
   styles: default-styles,
   names: default-names,
