@@ -10,6 +10,8 @@
   info: default-info,
   styles: default-styles,
   names: default-names,
+  logo: emoji.bookmark,
+  supplement: [],
   lang: "en",
   doc,
 ) = {
@@ -91,7 +93,7 @@
       ),
       date: datetime.today(),
       institution: institution,
-      logo: emoji.school,
+      logo: logo,
     ),
     config-colors(
       // primary
@@ -131,6 +133,7 @@
     indent: styles.spaces.contents-indent * 1pt,
     depth: 1,
   )
+
   doc
 
   [
@@ -143,4 +146,9 @@
       )
     ]
   ]
+
+  // content
+  if supplement != none {
+    supplement
+  }
 }

@@ -17,6 +17,8 @@ Import `touying-quick` from the `@preview` namespace.
   // info: default-info,
   // styles: default-styles,
   // names: default-names,
+  // logo: emoji.bookmark,
+  // supplement: [],
   // lang: "en",
   // doc,
 )
@@ -102,6 +104,20 @@ touying-quick's section names support English and Chinese by default. If you are
 after reading this file by `toml()`, assign its value to the argument `names` in function `touying-quick()`.
 
 Don't forget to change the key `lang` in your info toml metioned above.
+
+### Supplementary Contents
+
+When the argument `supplement` is not empty, the supplementary contents will be displayed after the ending slide. A handy usage is include your supplements in it, for example
+
+```typst
+#show: touying-quick.with(
+  ...,
+  supplement: [
+    #include("supplementary-content-1.typ")
+    #include("supplementary-content-2.typ")
+  ],
+)
+```
 
 ## Clone the Repository
 
