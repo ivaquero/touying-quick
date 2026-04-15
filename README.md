@@ -7,7 +7,7 @@ A quick-start slide template based on touying for academic reports.
 Import `touying-quick` from the `@preview` namespace.
 
 ```typst
-#import "@preview/touying-quick:0.4.0": *
+#import "@preview/touying-quick:0.4.2": *
 #show: touying-quick.with(
   title: "",
   subtitle: "",
@@ -49,7 +49,7 @@ The `info` is a toml file that like this
     ending = "Thanks for Your Attention"
 ```
 
-![example](0.1.0/thumbnail.png)
+![title-slide with the default background](0.1.0/thumbnail.png)
 
 ### Styles
 
@@ -109,7 +109,7 @@ Don't forget to change the key `lang` in your info toml metioned above.
 
 When the argument `supplement` is not empty, the supplementary contents will be displayed after the ending slide. A handy usage is include your supplements in it, for example
 
-```typst
+```text
 #show: touying-quick.with(
   ...,
   supplement: [
