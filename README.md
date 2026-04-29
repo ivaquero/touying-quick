@@ -1,16 +1,98 @@
-# touying-quick
+# Touying Quick
 
-A quick-start slide template based on touying for academic reports.
+Touying Quick is a Typst slide template built on
+[Touying](https://github.com/touying-typ/touying). It provides a fast academic report setup with a title slide, outline slide, Metropolis-based theme, background images, localized labels, equation references, theorem environments, styled code blocks, and optional supplementary slides.
 
-## Get Started
+## Features
 
-Import `touying-quick` from the `@preview` namespace.
+- One-call setup through `touying-quick.with(...)`.
+- Automatic title slide, outline slide, and ending slide.
+- Metropolis theme with configurable colors, footer, logo, and background image.
+- English and Chinese labels by default, with custom language support through TOML.
+- Heading-based slide structure powered by Touying.
+- Chapter-like equation numbering and references.
+- Table and code helpers for academic slides.
+- Optional supplementary content after the ending slide.
+
+## Installation
+
+### From Typst Universe
 
 ```typst
 #import "@preview/touying-quick:0.4.2": *
+```
+
+### From a Local Checkout
+
+Clone this repository into Typst's local package directory:
+
+- Linux:
+  - `$XDG_DATA_HOME/typst/packages/local`
+  - `~/.local/share/typst/packages/local`
+- macOS: `~/Library/Application Support/typst/packages/local`
+- Windows: `%APPDATA%/typst/packages/local`
+
+Then import the local package:
+
+```typst
+#import "@local/touying-quick:0.1.0": *
+```
+
+The local package keeps the version at `0.1.0` for development convenience.
+
+## Quick Start
+
+```typst
+#import "@preview/touying-quick:0.4.2": *
+
+#let info = toml("config/info.toml").example
+
 #show: touying-quick.with(
-  title: "",
-  subtitle: "",
+  title: "Writing a Slide Template",
+  subtitle: "Typst for Academic Reports",
+  info: info,
+)
+
+= Introduction
+
+== Why Typst?
+
+- Plain text source
+- Fast compilation
+- Strong math and layout primitives
+```
+
+![Title slide with the default background](0.1.0/thumbnail.png)
+
+## Slide Structure
+
+Touying Quick uses Touying's heading-based slide structure. With the default
+configuration, top-level headings create sections, and lower-level headings create
+slides.
+
+```typst
+= Section Title
+
+== Slide Title
+
+Slide content.
+
+---
+
+This creates another slide without changing the current heading.
+```
+
+The template calls `title-slide()` and creates an outline automatically before
+your content. It also adds an ending slide after your content.
+
+## Configuration
+
+Most configuration is passed to `touying-quick.with(...)`.
+
+```typst
+#show: touying-quick.with(
+  title: "Report Title",
+  subtitle: "Report Subtitle",
   // heading-idx: true,
   // bgimg: bgsky,
   // theme: "blue",
@@ -24,19 +106,13 @@ Import `touying-quick` from the `@preview` namespace.
 )
 ```
 
-## Tweaking the Params
+### Document Info
 
-### Heading Index
+`info` controls metadata used by the title slide, footer, language, and ending slide.
 
-`heading-idx` controls whether set heading-numbering.
-
-### Background Image
-
-`bgimg` provides with 3 options: `bgsky`, `bghexagon` and `bgbook`, if they are not your flavor, you may set it to your image path.
-
-### Infomation
-
-The `info` is a toml file that like this
+```typst
+#let info = toml("config/info.toml").example
+```
 
 ```toml
 [example]
@@ -44,7 +120,7 @@ The `info` is a toml file that like this
     header = ""
     lang = "en"
     author = "ivaquero"
-    series = "Typst for Academic Reports"
+    series = "Typst Slides Tutorial"
     institution = "School of Artificial Intelligence"
     ending = "Thanks for Your Attention"
 ```
@@ -57,29 +133,30 @@ If you are not satisfied with the default styles such as font-family, font-size,
 
 ```toml
 [fonts.en]
-    title = "Palatino"
-    author = "Times New Roman"
-    footer = "Georgia"
-    contents = "Georgia"
-    context = "Georgia"
-    math = "Times New Roman"
-    ending = "Palatino"
+title = "Palatino"
+subtitle = "Palatino"
+author = "Times New Roman"
+footer = "Georgia"
+contents = "Georgia"
+context = "Georgia"
+math = "Times New Roman"
+ending = "Palatino"
 
 [sizes]
-    author = 14
-    title = 40
-    context = 10.5
-    footer = 10
-    ending = 50
+author = 14
+title = 40
+context = 10.5
+footer = 10
+ending = 50
 
 [spaces]
-    par-indent = 2
-    par-leading = 1
-    par-spacing = 1
-    list-indent = 1.2
-    block-above = 1
-    block-below = 1
-    contents-indent = 2
+par-indent = 2
+par-leading = 1
+par-spacing = 1
+list-indent = 1.2
+block-above = 1
+block-below = 1
+contents-indent = 2
 ```
 
 after reading this file by `toml()`, assign its value to the `styles` argument in function `touying-quick()`.
@@ -90,26 +167,35 @@ touying-quick's section names support English and Chinese by default. If you are
 
 ```toml
 [sections.fr]
-    outline = "Contents"
+    outline = "Sommaire"
 
 [blocks.fr]
     algorithm = "Algorithme"
     table = "Tableau"
     figure = "Figure"
-    equation = " Eq."
+    equation = " Eq. "
     rule = "Règle"
     law = "Loi"
 ```
 
-after reading this file by `toml()`, assign its value to the argument `names` in function `touying-quick()`.
+```typst
+#let info = toml("config/info.toml").example
+#let names = toml("config/names.toml")
 
-Don't forget to change the key `lang` in your info toml metioned above.
+#show: touying-quick.with(
+  title: "Rapport",
+  info: info,
+  names: names,
+)
+```
 
-### Supplementary Contents
+Make sure `info.lang` exists in both `names` and `styles`.
 
-When the argument `supplement` is not empty, the supplementary contents will be displayed after the ending slide. A handy usage is include your supplements in it, for example
+### Supplementary Slides
 
-```text
+When `supplement` is not empty, it is displayed after the ending slide. This is useful for backup slides, appendices, or extra contents. A handy usage is include your supplements in it, for example
+
+```typst
 #show: touying-quick.with(
   ...,
   supplement: [
@@ -119,23 +205,40 @@ When the argument `supplement` is not empty, the supplementary contents will be 
 )
 ```
 
-## Clone the Repository
+## API Reference
 
-Clone the [touying-quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
+### Main Template
 
-- Linux：
-  - `$XDG_DATA_HOME/typst/packages/local`
-  - `~/.local/share/typst/packages/local`
-- macOS：`~/Library/Application\ Support/typst/packages/local`
-- Windows：`%APPDATA%/typst/packages/local`
+`touying-quick(title: "", subtitle: "", heading-idx: true, bgimg: bgsky, theme: "blue", info: default-info, styles: default-styles, names: default-names, logo: emoji.bookmark, supplement: [], lang: "en")[doc]`
 
-Import `touying-quick` in the document
+- `title`: title shown on the title slide.
+- `subtitle`: subtitle shown on the title slide. Empty values fall back to
+  `info.series`.
+- `heading-idx`: enables heading numbering when `true`.
+- `bgimg`: background image path.
+- `theme`: key under `styles.colors`.
+- `info`: metadata table.
+- `styles`: style table.
+- `names`: localized names table.
+- `logo`: logo passed to Touying's `config-info`.
+- `supplement`: content displayed after the ending slide.
 
-```typst
-#import "@local/touying-quick:0.1.0": *
-```
+### Utilities
 
-> For developement convinience, local repo never changes the version
+- `tableq(data, k, inset: 0.3em, stroke-color: rgb("000"))`: render CSV data as
+  a centered three-line table.
+- `table-three-line(stroke-color)`: stroke helper for three-line tables.
+- `table-no-left-right(stroke-color)`: stroke helper for tables without left and
+  right borders.
+- `code(text, lang: "python", breakable: true, width: 100%)`: render a styled
+  raw code block.
+- `tip`, `note`, `quote`, `warning`, `caution`: theorem-style blocks from
+  Theorion.
+
+## Examples
+
+- [`examples/example.typ`](examples/example.typ): a compact deck that exercises
+  the main template settings and common slide content.
 
 ## Credits
 
