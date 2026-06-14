@@ -1,4 +1,4 @@
-#import "@preview/touying:0.7.3": *
+#import "@preview/touying:0.7.4": *
 #import themes.metropolis: *
 // styles
 #import "@preview/codly:1.3.0": *
@@ -12,3 +12,4 @@
 #let bgsky = "config/sky.png"
 #let bghexagon = "config/hexagon.png"
 #let bgbook = "config/book.png"
+#let bgyellowish = "config/yellowish.png"
