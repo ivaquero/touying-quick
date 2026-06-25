@@ -90,3 +90,29 @@ neutral-light = "#3297df"
 neutral-lightest = "#fafafa"
 neutral-dark = "#202020"
 neutral-darkest = "#000000"
+
+[colors.green]
+# heading level 1
+primary = "#6da063"
+primary-light = "#fcbd00"
+primary-lightest = "#f7f2e5"
+primary-dark = "#ecdfbaff"
+primary-darkest = "#fcbd00"
+# heading level 2
+secondary = "#6da063"
+secondary-light = "#ff0000"
+secondary-lightest = "#6da063"
+secondary-dark = "#6da063"
+secondary-darkest = "#6da063"
+# heading level 3
+tertiary = "#448C95"
+tertiary-light = "#3297df"
+tertiary-lightest = "#3297df"
+tertiary-dark = "#3297df"
+tertiary-darkest = "#3297df"
+# content
+neutral = "#3297df"
+neutral-light = "#3297df"
+neutral-lightest = "#fafafa"
+neutral-dark = "#202020"
+neutral-darkest = "#000000"
