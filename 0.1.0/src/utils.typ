@@ -3,23 +3,10 @@
 #let font-for(styles, lang, role) = {
   let win-fonts = styles.fonts.at("windows", default: none)
   let mac-fonts = styles.fonts.at("macos", default: none)
-  let win-font = if win-fonts != none and win-fonts.at(lang, default: none) != none {
-    win-fonts.at(lang).at(role)
-  } else {
-    none
-  }
-  let mac-font = if mac-fonts != none and mac-fonts.at(lang, default: none) != none {
-    mac-fonts.at(lang).at(role)
-  } else {
-    none
-  }
-
-  if win-font != none and mac-font != none and win-font != mac-font {
-    return (win-font, mac-font)
-  } else if win-font != none {
-    return win-font
-  } else if mac-font != none {
-    return mac-font
+  if win-fonts != none and win-fonts.at(lang, default: none) != none {
+    return win-fonts.at(lang).at(role)
+  } else if mac-fonts != none and mac-fonts.at(lang, default: none) != none {
+    return mac-fonts.at(lang).at(role)
   }
 
   styles.fonts.at(lang).at(role)

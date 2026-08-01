@@ -132,7 +132,27 @@ Most configuration is passed to `touying-quick.with(...)`.
 If you are not satisfied with the default styles such as font-family, font-size, you can create a toml like
 
 ```toml
-[fonts.en]
+[fonts.windows.en]
+title = "Palatino Linotype"
+subtitle = "Palatino Linotype"
+author = "Times New Roman"
+footer = "Georgia"
+contents = "Georgia"
+context = "Georgia"
+math = "Times New Roman"
+ending = "Palatino Linotype"
+
+[fonts.windows.zh]
+title = "KaiTi"
+subtitle = "KaiTi"
+author = "KaiTi"
+footer = "SimSun"
+contents = "SimSun"
+context = "SimSun"
+math = "KaiTi"
+ending = "KaiTi"
+
+[fonts.macos.en]
 title = "Palatino"
 subtitle = "Palatino"
 author = "Times New Roman"
@@ -141,6 +161,16 @@ contents = "Georgia"
 context = "Georgia"
 math = "Times New Roman"
 ending = "Palatino"
+
+[fonts.macos.zh]
+title = "Kaiti SC"
+subtitle = "Kaiti SC"
+author = "Kaiti SC"
+footer = "Songti SC"
+contents = "Songti SC"
+context = "Songti SC"
+math = "Kaiti SC"
+ending = "Kaiti SC"
 
 [sizes]
 author = 14
@@ -159,7 +189,7 @@ block-below = 1
 contents-indent = 2
 ```
 
-after reading this file by `toml()`, assign its value to the `styles` argument in function `touying-quick()`.
+after reading this file by `toml()`, assign its value to the `styles` argument in function `touying-quick()`. Font lookup uses the Windows branch first and falls back to the macOS branch when no Windows branch exists.
 
 ### Names
 
@@ -209,7 +239,7 @@ When `supplement` is not empty, it is displayed after the ending slide. This is 
 
 ### Main Template
 
-`touying-quick(title: "", subtitle: "", heading-idx: true, bgimg: bgsky, theme: "blue", info: default-info, styles: default-styles, names: default-names, logo: emoji.bookmark, supplement: [], lang: "en")[doc]`
+`touying-quick(title: "", subtitle: "", heading-idx: true, bgimg: bgsky, theme: "blue", info: default-info, styles: default-styles, names: default-names, logo: emoji.bookmark, supplement: [], lang: none)[doc]`
 
 - `title`: title shown on the title slide.
 - `subtitle`: subtitle shown on the title slide. Empty values fall back to
@@ -222,6 +252,8 @@ When `supplement` is not empty, it is displayed after the ending slide. This is 
 - `names`: localized names table.
 - `logo`: logo passed to Touying's `config-info`.
 - `supplement`: content displayed after the ending slide.
+- `lang`: language key used for fonts and localized labels. When `none`, it
+  falls back to `info.lang`.
 
 ### Utilities
 
