@@ -20,18 +20,30 @@
   x
 }
 
+#let section-equation-index(loc) = {
+  let headings = query(selector(heading.where(level: 1)).before(loc))
+  let section-start = if headings.len() == 0 {
+    none
+  } else {
+    headings.last().location()
+  }
+  let previous-equations = if section-start == none {
+    0
+  } else {
+    counter(math.equation).at(section-start).first()
+  }
+  counter(math.equation).at(loc).first() - previous-equations + 1
+}
+
 #let equation-numbering-style(x) = {
   show math.equation: it => {
     if it.has("label") {
       let loc = it.location()
+      let h1 = counter(heading).at(loc).first()
+      let eq-index = section-equation-index(loc)
       math.equation(
         block: true,
-        numbering: {
-          let h1 = counter(heading).get().first()
-          n => {
-            numbering("(1.1)", h1, n)
-          }
-        },
+        numbering: _ => numbering("(1.1)", h1, eq-index),
         it,
       )
     } else {
@@ -46,10 +58,10 @@
   if el == none { return x }
   let loc = el.location()
   if el.func() == math.equation {
-    let eq-index = counter(math.equation).at(loc).first()
     let h1 = counter(heading).at(loc).first()
+    let eq-index = section-equation-index(loc)
 
-    names.blocks.at(lang).equation + link(loc, numbering("(1.1)", h1, eq-index + 1))
+    names.blocks.at(lang).equation + link(loc, numbering("(1.1)", h1, eq-index))
   } else { x }
 }
 

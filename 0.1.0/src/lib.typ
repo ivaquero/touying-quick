@@ -12,10 +12,10 @@
   names: default-names,
   logo: emoji.bookmark,
   supplement: [],
-  lang: "en",
+  lang: none,
   doc,
 ) = {
-  let lang = info.lang
+  let lang = if lang == none { info.lang } else { lang }
   let author = info.author
   let institution = info.institution
   let footer = info.footer
@@ -52,10 +52,6 @@
   set heading(numbering: "1.1.") if heading-idx == true
 
   show heading: heading-size-style.with(lang: lang, styles: styles)
-  show heading.where(level: 1): it => {
-    counter(math.equation).update(0)
-    it
-  }
 
   set math.cases(gap: .85em)
   show math.equation: equation-numbering-style

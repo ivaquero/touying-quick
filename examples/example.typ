@@ -1,6 +1,6 @@
 #import "@local/touying-quick:0.1.0": *
 
-#let info = toml("../0.1.0/config/info.toml").example
+#let info = toml("../0.1.0/src/config/info.toml").example
 
 #show: touying-quick.with(
   title: "Writing a Slide Template",
