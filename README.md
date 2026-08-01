@@ -62,7 +62,7 @@ The local package keeps the version at `0.1.0` for development convenience.
 - Strong math and layout primitives
 ```
 
-![Title slide with the default background](0.1.0/thumbnail.png)
+![Title slide with the default background](https://github.com/ivaquero/touying-quick/blob/64b76d3/0.1.0/thumbnail.png)
 
 ## Slide Structure
 
@@ -125,7 +125,7 @@ Most configuration is passed to `touying-quick.with(...)`.
     ending = "Thanks for Your Attention"
 ```
 
-![title-slide with the default background](https://github.com/ivaquero/touying-quick/blob/main/0.1.0/thumbnail.png)
+![title-slide with the default background](https://github.com/ivaquero/touying-quick/blob/64b76d3/0.1.0/thumbnail.png)
 
 ### Styles
 
@@ -225,7 +225,7 @@ Make sure `info.lang` exists in both `names` and `styles`.
 
 When `supplement` is not empty, it is displayed after the ending slide. This is useful for backup slides, appendices, or extra contents. A handy usage is include your supplements in it, for example
 
-```typst
+```text
 #show: touying-quick.with(
   ...,
   supplement: [
@@ -269,7 +269,7 @@ When `supplement` is not empty, it is displayed after the ending slide. This is 
 
 ## Examples
 
-- [`examples/example.typ`](https://github.com/ivaquero/touying-quick/blob/main/examples/example.typ): a compact deck that exercises
+- [`examples/example.typ`](https://github.com/ivaquero/touying-quick/blob/64b76d3/examples/example.typ): a compact deck that exercises
   the main template settings and common slide content.
 
 ## Credits
