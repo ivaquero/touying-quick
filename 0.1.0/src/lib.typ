@@ -45,7 +45,7 @@
 
   set text(
     size: styles.sizes.context * 1pt,
-    font: styles.fonts.at(lang).context,
+    font: font-for(styles, lang, "context"),
     lang: lang,
   )
 
@@ -69,23 +69,23 @@
     footer: text(
       footer,
       size: styles.sizes.footer * 1pt,
-      font: styles.fonts.at(lang).footer,
+      font: font-for(styles, lang, "footer"),
     ),
     config-info(
       title: text(
         title,
         size: styles.sizes.title * 1pt,
-        font: styles.fonts.at(lang).title,
+        font: font-for(styles, lang, "title"),
       ),
       subtitle: text(
         subt,
         size: styles.sizes.subtitle * 1pt,
-        font: styles.fonts.at(lang).subtitle,
+        font: font-for(styles, lang, "subtitle"),
       ),
       author: text(
         author,
         size: styles.sizes.author * 1pt,
-        font: styles.fonts.at(lang).author,
+        font: font-for(styles, lang, "author"),
       ),
       date: datetime.today(),
       institution: institution,
@@ -138,7 +138,7 @@
       #text(
         ending,
         size: styles.sizes.ending * 1pt,
-        font: styles.fonts.at(lang).ending,
+        font: font-for(styles, lang, "ending"),
       )
     ]
   ]

@@ -19,7 +19,7 @@ Touying Quick is a Typst slide template built on
 ### From Typst Universe
 
 ```typst
-#import "@preview/touying-quick:0.4.2": *
+#import "@preview/touying-quick:0.5.0": *
 ```
 
 ### From a Local Checkout
@@ -43,7 +43,7 @@ The local package keeps the version at `0.1.0` for development convenience.
 ## Quick Start
 
 ```typst
-#import "@preview/touying-quick:0.4.2": *
+#import "@preview/touying-quick:0.5.0": *
 
 #let info = toml("config/info.toml").example
 
@@ -125,7 +125,7 @@ Most configuration is passed to `touying-quick.with(...)`.
     ending = "Thanks for Your Attention"
 ```
 
-![title-slide with the default background](0.1.0/thumbnail.png)
+![title-slide with the default background](https://github.com/ivaquero/touying-quick/blob/main/0.1.0/thumbnail.png)
 
 ### Styles
 
@@ -237,7 +237,7 @@ When `supplement` is not empty, it is displayed after the ending slide. This is 
 
 ## Examples
 
-- [`examples/example.typ`](examples/example.typ): a compact deck that exercises
+- [`examples/example.typ`](https://github.com/ivaquero/touying-quick/blob/main/examples/example.typ): a compact deck that exercises
   the main template settings and common slide content.
 
 ## Credits

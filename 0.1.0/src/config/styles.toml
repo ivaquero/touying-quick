@@ -1,4 +1,24 @@
-[fonts.en]
+[fonts.windows.en]
+title = "Palatino Linotype"
+subtitle = "Palatino Linotype"
+author = "Times New Roman"
+footer = "Georgia"
+contents = "Georgia"
+context = "Georgia"
+math = "Times New Roman"
+ending = "Palatino Linotype"
+
+[fonts.windows.zh]
+title = "KaiTi"
+subtitle = "KaiTi"
+author = "KaiTi"
+footer = "SimSun"
+contents = "SimSun"
+context = "SimSun"
+math = "KaiTi"
+ending = "KaiTi"
+
+[fonts.macos.en]
 title = "Palatino"
 subtitle = "Palatino"
 author = "Times New Roman"
@@ -8,15 +28,15 @@ context = "Georgia"
 math = "Times New Roman"
 ending = "Palatino"
 
-[fonts.zh]
-title = "STKaiti"
-subtitle = "STKaiti"
+[fonts.macos.zh]
+title = "Kaiti SC"
+subtitle = "Kaiti SC"
 author = "Kaiti SC"
 footer = "Songti SC"
 contents = "Songti SC"
 context = "Songti SC"
 math = "Kaiti SC"
-ending = "STKaiti"
+ending = "Kaiti SC"
 
 [sizes]
 author = 14

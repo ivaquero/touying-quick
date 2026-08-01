@@ -1,10 +1,35 @@
 #import "deps.typ": *
 
+#let font-for(styles, lang, role) = {
+  let win-fonts = styles.fonts.at("windows", default: none)
+  let mac-fonts = styles.fonts.at("macos", default: none)
+  let win-font = if win-fonts != none and win-fonts.at(lang, default: none) != none {
+    win-fonts.at(lang).at(role)
+  } else {
+    none
+  }
+  let mac-font = if mac-fonts != none and mac-fonts.at(lang, default: none) != none {
+    mac-fonts.at(lang).at(role)
+  } else {
+    none
+  }
+
+  if win-font != none and mac-font != none and win-font != mac-font {
+    return (win-font, mac-font)
+  } else if win-font != none {
+    return win-font
+  } else if mac-font != none {
+    return mac-font
+  }
+
+  styles.fonts.at(lang).at(role)
+}
+
 // text
 #let ctext(
   label,
   size: .8em,
-  font: default-styles.fonts.at("zh").math,
+  font: font-for(default-styles, "zh", "math"),
   ..options,
 ) = text(
   label,
